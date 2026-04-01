@@ -28,10 +28,10 @@ export function useCurrencies(): UseCurrenciesResult {
                     });
                     setCurrencies(sortedCurrencies);
                 }
-            } catch (err) {
+            } catch (error) {
                 if (!beenCancelled) {
                     setError(
-                        err instanceof Error ? err.message : "Failed to load currencies"
+                        error instanceof Error ? error.message : "Failed to load currencies"
                     );
                 }
             } finally {

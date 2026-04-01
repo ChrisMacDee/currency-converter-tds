@@ -13,19 +13,6 @@ function getApiKey(): string {
   return key;
 }
 
-/* export async function fetchCurrencies(): Promise<Currency[]> {
-  const response = await fetch(
-    `${BASE_URL}/currencies?api_key=${getApiKey()}&type=fiat`
-  );
-
-  if (!response.ok) {
-    throw new Error(`Failed to fetch currencies: ${response.status}`);
-  }
-
-  const data: CurrencyResponse = await response.json();
-  return data.response;
-}*/
-
 export async function fetchCurrencies(): Promise<Currency[]> {
     const response = await fetch(`${BASE_URL}/currencies?api_key=${getApiKey()}`);
 
